@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
-#include "main.h"
+#include "graphics_handler.h"
 
 
+int main(int argc, char **argv) {
+    int frameBuffer[SIZE_X][SIZE_Y] = {0};
 
-int main() {
-    printf("hellowolrd");
+    setPixel(5, 3,  &frameBuffer[0]);
+
+    printBufferOnConsole(frameBuffer);
     return 0;
 }
 
-int addition(int a, int b) {
-    return a + b;
-}

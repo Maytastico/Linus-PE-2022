@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
-#include "main.h"
+#include "graphics_handler.h"
 
 int main() {
     assert(addition(2, 3) == 5);
