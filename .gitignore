@@ -53,7 +53,7 @@ Mkfile.old
 dkms.conf
 
 #Jetbrains
-idea
+idea/
 
 #ppm
 *.ppm
