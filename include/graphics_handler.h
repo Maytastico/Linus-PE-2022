@@ -8,8 +8,8 @@
 /**
  * Defines the resolution of the picture
  */
-#define SIZE_X 50
-#define SIZE_Y 50
+#define SIZE_X 1000
+#define SIZE_Y 1000
 
 /**
  * Defines the color of the drawn pixel

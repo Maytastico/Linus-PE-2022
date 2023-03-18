@@ -41,6 +41,7 @@
 *.su
 *.idb
 *.pdb
+cmake-build-debug/
 
 # Kernel Module Compile Results
 *.mod*
@@ -50,3 +51,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#Jetbrains
+idea
+
+#ppm
+*.ppm
+
