@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
-#include "graphics_handler.h"
+#include "include/graphics_handler.h"
 
 void test_line();
 void test_pixel();
+void testVectors();
+void testRectangle();
 
 int main() {
-    assert(addition(2, 3) == 5);
-    assert(addition(0, 0) == 0);
-    assert(addition(-2, 2) == 0);
     test_line();
     test_pixel();
+    testVectors();
     printf("All tests passed!\n");
     return EXIT_SUCCESS;
 }
@@ -38,4 +38,26 @@ void test_pixel(){
     assert(frame[1][5]==0);
     assert(frame[3][5]==0);
 
+}
+
+void testVectors(){
+    Vector_2D result = {500,340};
+    Vector_2D test_vector = {20,30};
+    assert(result.x==500);
+    assert(result.y==340);
+    result = addVector(result, test_vector);
+    assert(result.x==520);
+    assert(result.y==370);
+    result = multiplyVector(result, test_vector);
+    assert(result.x==10400);
+    assert(result.y==11100);
+    result = divideVector(result, test_vector);
+    assert(result.x==520);
+    assert(result.y==370);
+    result = middleVector(result, test_vector);
+    assert(result.x==270);
+    assert(result.y==200);
+    result = subtractVector(result, test_vector);
+    assert(result.x==250);
+    assert(result.y==170);
 }

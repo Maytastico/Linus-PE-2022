@@ -13,7 +13,7 @@ int create_ppm_header(char *pFilename){
     int ret = EXIT_FAILURE;
     FILE *pFileHandler = fopen(pFilename, "w");
     if(NULL != pFileHandler){
-        fprintf(pFileHandler, "P3\n %d %d\n 255\n", SIZE_X, SIZE_Y);
+        fprintf(pFileHandler, "P3\n%d %d\n255\n", SIZE_X, SIZE_Y);
         fclose(pFileHandler);
         ret = EXIT_SUCCESS;
     }else{
@@ -34,10 +34,10 @@ int writeBufferToFile(char *pFilename, int i_pBuffer[SIZE_X][SIZE_Y]){
                         fprintf(pFileHandler, "255 255 255");
                         break;
                     case 1:
-                        fprintf(pFileHandler, "0 0 0");
+                        fprintf(pFileHandler, "0 0 255");
                         break;
                 }
-                fprintf(pFileHandler, "\n");
+                fprintf(pFileHandler, " ");
             }
         }
         fclose(pFileHandler);
