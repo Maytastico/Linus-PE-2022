@@ -4,7 +4,12 @@
 #include <stdio.h>
 #include <assert.h>
 
-
+/**
+ * Adds two vectors
+ * @param i_vec0
+ * @param i_vec1
+ * @return
+ */
 Vector_2D addVector(Vector_2D i_vec0, Vector_2D i_vec1){
     Vector_2D result;
     result.x = i_vec0.x + i_vec1.x;
@@ -12,6 +17,12 @@ Vector_2D addVector(Vector_2D i_vec0, Vector_2D i_vec1){
     return result;
 }
 
+/**
+ * Subtracts two vectors
+ * @param i_vec0
+ * @param i_vec1
+ * @return
+ */
 Vector_2D subtractVector(Vector_2D i_vec0, Vector_2D i_vec1){
     Vector_2D result;
     result.x = i_vec0.x - i_vec1.x;
@@ -19,6 +30,12 @@ Vector_2D subtractVector(Vector_2D i_vec0, Vector_2D i_vec1){
     return result;
 }
 
+/**
+ * Multiplys two vectors
+ * @param i_vec0
+ * @param i_vec1
+ * @return
+ */
 Vector_2D multiplyVector(Vector_2D i_vec0, Vector_2D i_vec1){
     Vector_2D result;
     result.x = i_vec0.x * i_vec1.x;
@@ -26,6 +43,12 @@ Vector_2D multiplyVector(Vector_2D i_vec0, Vector_2D i_vec1){
     return result;
 }
 
+/**
+ * Devides two vectors
+ * @param i_vec0
+ * @param i_vec1
+ * @return
+ */
 Vector_2D divideVector(Vector_2D i_vec0, Vector_2D i_vec1){
     Vector_2D result;
     //assert(i_vec1.x==0);
@@ -35,6 +58,12 @@ Vector_2D divideVector(Vector_2D i_vec0, Vector_2D i_vec1){
     return result;
 }
 
+/**
+ * Calculates the point that lies at the middle of two vectors
+ * @param i_vec0
+ * @param i_vec1
+ * @return
+ */
 Vector_2D middleVector(Vector_2D i_vec0, Vector_2D i_vec1){
     Vector_2D result;
     Vector_2D factor = {2,2};
