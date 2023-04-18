@@ -18,7 +18,10 @@ int main() {
 
 void test_line(){
     int frame[SIZE_X][SIZE_Y];
-    drawLine(0,0,5,5,frame);
+    Vector_2D point_A = {0,0};
+    Vector_2D point_B = {5,5};
+
+    drawLine(point_A,point_B,frame);
     assert(frame[0][0] == 1);
     assert(frame[1][1] == 1);
     assert(frame[2][2] == 1);
@@ -31,13 +34,13 @@ void test_line(){
 
 void test_pixel(){
     int frame[SIZE_X][SIZE_Y];
-    setPixel(2,5,frame);
+    Vector_2D point = {2,5};
+    setPixel(point,frame);
     assert(frame[2][5]==1);
     assert(frame[2][6]==0);
     assert(frame[2][4]==0);
     assert(frame[1][5]==0);
     assert(frame[3][5]==0);
-
 }
 
 void testVectors(){

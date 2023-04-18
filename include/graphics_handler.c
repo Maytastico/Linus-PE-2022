@@ -78,61 +78,62 @@ Vector_2D middleVector(Vector_2D i_vec0, Vector_2D i_vec1){
  * @param i_y
  * @param io_pBuffer
  */
-void setPixel(int i_x, int i_y, int io_pBuffer[SIZE_X][SIZE_Y]){
-    assert(i_x <= SIZE_X);
-    assert(i_y <= SIZE_Y);
-    io_pBuffer[i_x][i_y] = 1;
+void setPixel(Vector_2D i_point, int io_pBuffer[SIZE_X][SIZE_Y]){
+    assert(i_point.x <= SIZE_X);
+    assert(i_point.y <= SIZE_Y);
+    io_pBuffer[i_point.x][i_point.y] = 1;
 }
 
 /**
  * Takes an array and draws a line with the bresenham algorithm
- * @param i_start_x
- * @param i_start_y
- * @param i_end_x
- * @param i_end_y
+ * @param i_start
+ * @param i_end
  * @param io_pBuffer
  */
-void drawLine(int i_start_x, int i_start_y, int i_end_x, int i_end_y, int io_pBuffer[SIZE_X][SIZE_Y]){
-    int dx = abs(i_end_x - i_start_x);
-    int dy = abs(i_start_y - i_end_y);
-    int sx = i_start_x < i_end_x ? 1 : -1;
-    int sy = i_start_y < i_end_y ? 1 : -1;
+void drawLine(Vector_2D i_start, Vector_2D i_end, int io_pBuffer[SIZE_X][SIZE_Y]){
+    Vector_2D point = {0,0};
+    int dx = abs(i_end.x - i_start.x);
+    int dy = abs(i_start.y - i_end.y);
+    int sx = i_start.x < i_end.x ? 1 : -1;
+    int sy = i_start.y < i_end.y ? 1 : -1;
     int err = dx - dy;
 
-    while (i_start_x != i_end_x || i_start_y != i_end_y) {
-        setPixel(i_start_x, i_start_y, io_pBuffer);
+    while (i_start.x != i_end.x || i_start.y != i_end.y) {
+        point.x = i_start.x;
+        point.y = i_start.y;
+        //Calculates and draws the point into buffer
+        setPixel(point, io_pBuffer);
         int e2 = 2 * err;
         if (e2 > -dy) {
             err -= dy;
-            i_start_x += sx;
+            i_start.x += sx;
         }
         if (e2 < dx) {
             err += dx;
-            i_start_y += sy;
+            i_start.y += sy;
         }
     }
-    setPixel(i_end_x, i_end_y, io_pBuffer);
+    //Sets the End Point to be drawn
+    point.x = i_end.x;
+    point.y = i_end.y;
+    setPixel(point, io_pBuffer);
 }
 
 /**
- * Takes four point and draws lines vom point to point
- * @param i_X0
- * @param i_Y0
- * @param i_X1
- * @param i_Y1
- * @param i_X2
- * @param i_Y2
- * @param i_X3
- * @param i_Y3
+ * Takes vector structures and draws lines from vector to vector so it resembles a rectangle
+ * @param i_A
+ * @param i_B
+ * @param i_C
+ * @param i_D
  * @param io_pBuffer
  */
-void drawRect(int i_X0, int i_Y0, int i_X1, int i_Y1, int i_X2, int i_Y2, int i_X3, int i_Y3, int io_pBuffer[SIZE_X][SIZE_Y]){
-
-    drawLine(i_X0,i_Y0,i_X1,i_Y1,io_pBuffer);
-    drawLine(i_X1,i_Y1,i_X2,i_Y2,io_pBuffer);
-    drawLine(i_X2,i_Y2,i_X3,i_Y3,io_pBuffer);
-    drawLine(i_X3,i_Y3,i_X0,i_Y0,io_pBuffer);
+void drawRect(Vector_2D i_A,Vector_2D i_B,Vector_2D i_C,Vector_2D i_D, int io_pBuffer[SIZE_X][SIZE_Y]){
+    drawLine(i_A,i_B, io_pBuffer);
+    drawLine(i_B,i_C,io_pBuffer);
+    drawLine(i_C, i_D,io_pBuffer);
+    drawLine(i_D,i_A,io_pBuffer);
 }
+
 /**
  * Prints out and formates a given matrix to the console.
  * @param io_pBuffer

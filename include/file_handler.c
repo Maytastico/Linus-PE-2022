@@ -8,7 +8,11 @@
 #include <stdio.h>
 #include <assert.h>
 
-
+/**
+ * Creates header information for the ppm file
+ * @param pFilename
+ * @return
+ */
 int create_ppm_header(char *pFilename){
     int ret = EXIT_FAILURE;
     FILE *pFileHandler = fopen(pFilename, "w");
@@ -22,6 +26,12 @@ int create_ppm_header(char *pFilename){
     return ret;
 }
 
+/**
+ * Writes the color information from a buffer into a ppm file
+ * @param pFilename
+ * @param i_pBuffer
+ * @return
+ */
 int writeBufferToFile(char *pFilename, int i_pBuffer[SIZE_X][SIZE_Y]){
     int ret = EXIT_FAILURE;
     FILE *pFileHandler = fopen(pFilename, "a");
