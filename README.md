@@ -41,6 +41,8 @@ Requirements:
 * gcc
 
 This program was tested on Ubuntu 22.04 with ggc version 11.3.0
+
+The size of the image can be adjusted inside of graphics_handler.h
 ## Compile
 ```bash
 gcc main.c include/file_handler.c include/graphics_handler.c
