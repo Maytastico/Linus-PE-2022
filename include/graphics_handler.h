@@ -28,15 +28,15 @@ struct Vector_2D{
 
 typedef struct Vector_2D Vector_2D;
 
-Vector_2D middleVector(Vector_2D i_vec0, Vector_2D i_vec1);
+Vector_2D middleOfVectors(Vector_2D i_vec0, Vector_2D i_vec1);
 
-Vector_2D divideVector(Vector_2D i_vec0, Vector_2D i_vec1);
+Vector_2D divideVectors(Vector_2D i_vec0, Vector_2D i_vec1);
 
-Vector_2D multiplyVector(Vector_2D i_vec0, Vector_2D i_vec1);
+Vector_2D multiplyVectors(Vector_2D i_vec0, Vector_2D i_vec1);
 
-Vector_2D subtractVector(Vector_2D i_vec0, Vector_2D i_vec1);
+Vector_2D subtractVectors(Vector_2D i_vec0, Vector_2D i_vec1);
 
-Vector_2D addVector(Vector_2D i_vec0, Vector_2D i_vec1);
+Vector_2D addVectors(Vector_2D i_vec0, Vector_2D i_vec1);
 
 void setPixel(Vector_2D i_point, int io_pBuffer[SIZE_X][SIZE_Y]);
 

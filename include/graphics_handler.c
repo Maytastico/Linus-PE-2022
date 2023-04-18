@@ -10,7 +10,7 @@
  * @param i_vec1
  * @return
  */
-Vector_2D addVector(Vector_2D i_vec0, Vector_2D i_vec1){
+Vector_2D addVectors(Vector_2D i_vec0, Vector_2D i_vec1){
     Vector_2D result;
     result.x = i_vec0.x + i_vec1.x;
     result.y = i_vec0.y + i_vec1.y;
@@ -23,7 +23,7 @@ Vector_2D addVector(Vector_2D i_vec0, Vector_2D i_vec1){
  * @param i_vec1
  * @return
  */
-Vector_2D subtractVector(Vector_2D i_vec0, Vector_2D i_vec1){
+Vector_2D subtractVectors(Vector_2D i_vec0, Vector_2D i_vec1){
     Vector_2D result;
     result.x = i_vec0.x - i_vec1.x;
     result.y = i_vec0.y - i_vec1.y;
@@ -36,7 +36,7 @@ Vector_2D subtractVector(Vector_2D i_vec0, Vector_2D i_vec1){
  * @param i_vec1
  * @return
  */
-Vector_2D multiplyVector(Vector_2D i_vec0, Vector_2D i_vec1){
+Vector_2D multiplyVectors(Vector_2D i_vec0, Vector_2D i_vec1){
     Vector_2D result;
     result.x = i_vec0.x * i_vec1.x;
     result.y = i_vec0.y * i_vec1.y;
@@ -49,7 +49,7 @@ Vector_2D multiplyVector(Vector_2D i_vec0, Vector_2D i_vec1){
  * @param i_vec1
  * @return
  */
-Vector_2D divideVector(Vector_2D i_vec0, Vector_2D i_vec1){
+Vector_2D divideVectors(Vector_2D i_vec0, Vector_2D i_vec1){
     Vector_2D result;
     //assert(i_vec1.x==0);
     //assert(i_vec1.y==0);
@@ -64,11 +64,11 @@ Vector_2D divideVector(Vector_2D i_vec0, Vector_2D i_vec1){
  * @param i_vec1
  * @return
  */
-Vector_2D middleVector(Vector_2D i_vec0, Vector_2D i_vec1){
+Vector_2D middleOfVectors(Vector_2D i_vec0, Vector_2D i_vec1){
     Vector_2D result;
     Vector_2D factor = {2,2};
-    result = addVector(i_vec0, i_vec1);
-    result = divideVector(result, factor);
+    result = addVectors(i_vec0, i_vec1);
+    result = divideVectors(result, factor);
     return result;
 }
 

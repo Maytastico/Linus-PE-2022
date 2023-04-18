@@ -48,19 +48,19 @@ void testVectors(){
     Vector_2D test_vector = {20,30};
     assert(result.x==500);
     assert(result.y==340);
-    result = addVector(result, test_vector);
+    result = addVectors(result, test_vector);
     assert(result.x==520);
     assert(result.y==370);
-    result = multiplyVector(result, test_vector);
+    result = multiplyVectors(result, test_vector);
     assert(result.x==10400);
     assert(result.y==11100);
-    result = divideVector(result, test_vector);
+    result = divideVectors(result, test_vector);
     assert(result.x==520);
     assert(result.y==370);
-    result = middleVector(result, test_vector);
+    result = middleOfVectors(result, test_vector);
     assert(result.x==270);
     assert(result.y==200);
-    result = subtractVector(result, test_vector);
+    result = subtractVectors(result, test_vector);
     assert(result.x==250);
     assert(result.y==170);
 }
