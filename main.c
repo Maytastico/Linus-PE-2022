@@ -24,6 +24,14 @@ int main(int argc, char **argv) {
         Vector_2D begin_C = {SIZE_X-50,SIZE_Y-50};
         Vector_2D begin_D = {50,SIZE_X-50};
 
+        Vector_2D middle_AB = middleOfVectors(begin_A, begin_B);
+        Vector_2D middle_BC = middleOfVectors(begin_B, begin_C);
+        Vector_2D middle_CD = middleOfVectors(begin_C, begin_D);
+        Vector_2D middle_DA = middleOfVectors(begin_D, begin_A);
+
+        drawLine(middle_AB, middle_CD, frameBuffer);
+        drawLine(middle_BC, middle_DA, frameBuffer);
+
         drawRectangles(number_of_interations, begin_A, begin_B, begin_C, begin_D, frameBuffer);
 
         if(writeBufferToFile("First_Creation.ppm", frameBuffer)==EXIT_SUCCESS){
@@ -50,11 +58,11 @@ void drawRectangles(int n, Vector_2D i_a, Vector_2D i_b, Vector_2D i_c, Vector_2
         return;
     }else {
         drawRect(i_a, i_b, i_c,i_d, io_pBuffer);
-        Vector_2D middle_A = middleOfVectors(i_a, i_b);
-        Vector_2D middle_B = middleOfVectors(i_b, i_c);
-        Vector_2D middle_C = middleOfVectors(i_c, i_d);
-        Vector_2D middle_D = middleOfVectors(i_d, i_a);
-        drawRectangles(n-1, middle_A, middle_B, middle_C, middle_D, io_pBuffer);
+        Vector_2D middle_AB = middleOfVectors(i_a, i_b);
+        Vector_2D middle_BC = middleOfVectors(i_b, i_c);
+        Vector_2D middle_CD = middleOfVectors(i_c, i_d);
+        Vector_2D middle_DA = middleOfVectors(i_d, i_a);
+        drawRectangles(n-1, middle_AB, middle_BC, middle_CD, middle_DA, io_pBuffer);
     }
 }
 

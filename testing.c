@@ -20,7 +20,8 @@ void test_line(){
     int frame[SIZE_X][SIZE_Y];
     Vector_2D point_A = {0,0};
     Vector_2D point_B = {5,5};
-
+    //Bilder als referenz nehmen und dieses Vergleichen keine einzelenen Punkte
+    //Segfault abfangen ctest
     drawLine(point_A,point_B,frame);
     assert(frame[0][0] == 1);
     assert(frame[1][1] == 1);
@@ -35,6 +36,7 @@ void test_line(){
 void test_pixel(){
     int frame[SIZE_X][SIZE_Y];
     Vector_2D point = {2,5};
+    //Pixel setzten,der ausserhalb vom framepuffer geht
     setPixel(point,frame);
     assert(frame[2][5]==1);
     assert(frame[2][6]==0);
@@ -44,6 +46,7 @@ void test_pixel(){
 }
 
 void testVectors(){
+    //Mehr abfragen, Division mit null negative werte
     Vector_2D result = {500,340};
     Vector_2D test_vector = {20,30};
     assert(result.x==500);
