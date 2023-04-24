@@ -1,5 +1,20 @@
 @startuml
 start
+:iterations = input();
+:frame[50][50];
+:a = {0,0}; 
+:b = {50,0};
+:c = {50,50};
+:d = {0,50};
 
-:SaveToFile
+repeat
+    :drawRect(a, b, c, d, frame);
+    :a = middle(a,b);
+    :c = middle(b,c);
+    :a = middle(c,d);
+    :a = middle(d,a);
+repeat while (interations != 0)
+
+:exportFrame(frame);
+stop
 @enduml

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
-#include "include/graphics_handler.h"
+#include "include/graphics_handler.h" 
 
 void test_line();
 void test_pixel();

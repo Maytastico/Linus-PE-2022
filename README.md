@@ -11,7 +11,9 @@ Before rendering the picture the program will ask how many rectangles should be 
 # Algorithm
 Using recursion the program will generate a rectangles, while n is the number of execution cycles.
 The function passes the edges of every rectangle and after every iteration cycle the new point will be 
-the middle of the two points
+the middle of the two points. The algoritmen defines these points as the rectangle: 
+
+![Rectangle](./img/recangle.svg)
 
 pseudo-code
 ```c
@@ -33,7 +35,9 @@ drawStructure(n, A, B, C, D){
           
 }
 ```
+UML Diagram:
 
+![UML Diagram](./img/algorithm.svg)
 # Instruction
 
 Requirements:
