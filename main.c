@@ -1,3 +1,10 @@
+/**
+ * Programmentwurf 1. Semester
+ * DHBW Heidenheim
+ *
+ * Name: Maylis Grune
+ * Matrikelnummer: 5509286
+ */
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>

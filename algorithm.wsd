@@ -10,9 +10,9 @@ start
 repeat
     :drawRect(a, b, c, d, frame);
     :a = middle(a,b);
-    :c = middle(b,c);
-    :a = middle(c,d);
-    :a = middle(d,a);
+    :b = middle(b,c);
+    :c = middle(c,d);
+    :d = middle(d,a);
 repeat while (interations != 0)
 
 :exportFrame(frame);

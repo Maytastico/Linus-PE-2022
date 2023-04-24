@@ -1,6 +1,4 @@
-//
-// Created by maylis on 16.03.23.
-//
+
 #include <stdbool.h>
 
 #ifndef LINUS_PE_2022_GRAPHICS_HANDLER_H
@@ -38,8 +36,6 @@ Vector_2D multiplyVectors(Vector_2D i_vec0, Vector_2D i_vec1);
 Vector_2D subtractVectors(Vector_2D i_vec0, Vector_2D i_vec1);
 
 Vector_2D addVectors(Vector_2D i_vec0, Vector_2D i_vec1);
-
-bool compareFrames(int i_array1[], int i_array2[], int size);
 
 void setPixel(Vector_2D i_point, int io_pBuffer[SIZE_X][SIZE_Y]);
 

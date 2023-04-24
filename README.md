@@ -1,7 +1,4 @@
 # Linus-PE-2022
-* Assignment
-* Algorithm
-* Instructions
 
 # Assignment
 This program should create a printable bitmap graphic that looks like the picture below.
@@ -37,7 +34,7 @@ drawStructure(n, A, B, C, D){
 ```
 UML Diagram:
 
-![UML Diagram](./img/algorithm.svg)
+![UML Diagram](./img/algorithm.png)
 # Instruction
 
 Requirements:
@@ -57,3 +54,6 @@ gcc main.c include/file_handler.c include/graphics_handler.c
 ```
 
 When executing the file with CLion the generated file will appear inside the folder cmake-build-debug
+
+# GitHub Repository
+[Repository](https://github.com/Maytastico/Linus-PE-2022)

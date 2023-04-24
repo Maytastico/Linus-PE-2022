@@ -72,22 +72,6 @@ Vector_2D middleOfVectors(Vector_2D i_vec0, Vector_2D i_vec1){
     return result;
 }
 
-/**
- * Compares two frames with eachother.
- * Can be used for testing whether on frame has equel content.
- * @param i_array1
- * @param i_array2
- * @param size
- * @return
- */
-bool compareFrames(int i_array1[], int i_array2[], int size){
-    for (int i = 0; i < size*size; ++i) {
-        if(i_array1[i] != i_array2[i]){
-            return false;
-        }
-    }
-    return true;
-}
 
 /**
  * Draw a point inside a given matrix
