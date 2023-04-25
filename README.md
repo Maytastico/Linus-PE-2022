@@ -14,11 +14,13 @@ the middle of the two points. The algoritmen defines these points as the rectang
 
 pseudo-code
 ```c
+main{
+    #Edge A(0/0) B(0/1000) C(1000/1000) D(1000/0)
+    drawStructure(3, A, B, C, D)   
+}
+
 drawStructure(n, A, B, C, D){
-    
   if n == 0: return;
-  
-  #Edge A(0/0) B(0/1000) C(1000/1000) D(1000/0)
   
   drawRecangle(A, B, C, C)
   
