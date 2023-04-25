@@ -1,7 +1,7 @@
 @startuml
 start
 :iterations = input();
-:frame[50][50];
+:frame[51][51];
 :a = {0,0}; 
 :b = {50,0};
 :c = {50,50};
@@ -13,6 +13,7 @@ repeat
     :b = middle(b,c);
     :c = middle(c,d);
     :d = middle(d,a);
+    :interations = iterations - 1;
 repeat while (interations != 0)
 
 :exportFrame(frame);

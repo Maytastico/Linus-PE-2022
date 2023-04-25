@@ -28,13 +28,13 @@ drawStructure(n, A, B, C, D){
   D = middleOfVectors(D, A)
   
   #Edges A(0/500) B(500/1000) C(1000/500)
-  drawStructure(n, A, B, C, D)
+  drawStructure(n-1, A, B, C, D)
           
 }
 ```
 UML Diagram:
 
-![UML Diagram](./img/algorithm.png)
+![UML Diagram](./img/algorithm.svg)
 # Instruction
 
 Requirements:
